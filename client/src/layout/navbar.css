@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    background-color: #001332;
+    height: 60px;
+    color: white;
+    justify-content:center;
+    align-items: center;
+    font-family: Lato, sans-serif;
+    padding-right: 30px;
+    padding-left: 30px;
+
+}
+
+.title {
+    margin-right: auto;
+}
+
+.new-topic {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.new-topic:hover {
+    text-decoration: underline;
+}
