@@ -14,7 +14,7 @@ export default function ViewTopic() {
         mensaje: ""
     })
 
-    const {id} = useParams()
+    const { id } = useParams()
 
     useEffect(() => {
         loadTopic()
@@ -45,9 +45,12 @@ export default function ViewTopic() {
 
                     <h4>Mensaje</h4>
                     <p>{topic.mensaje}</p>
+                </div>
 
+                <div className={styles.buttons}>
                     <Link
                         to={"/"}
+                        className={styles.back}
                     >
                         Ir a Home
                     </Link>

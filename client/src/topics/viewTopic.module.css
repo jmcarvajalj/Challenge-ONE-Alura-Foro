@@ -8,6 +8,7 @@
     background-color: #001332;
     border-radius: 20px;
     width: 600px;
+    height: 85vh;
     margin-top: 50px;
     margin-top: 10px;
 }
@@ -15,7 +16,7 @@
 .title {
     text-align: center;
     color: white;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 .form {
@@ -25,39 +26,6 @@
     justify-content: center;
 }
 
-.form label {
-    font-size: 19px;
-    padding: 5px;
-    color: white;
-}
-
-.form input {
-    width: 400px;
-    border-radius: 5px;
-    height: 30px;
-    border: 1px black solid;
-    font-size: 16px;
-}
-
-.form input:focus {
-    outline: none;
-}
-
-.message {
-    margin-bottom: 10px;
-    width: 400px;
-    height: 100px;
-    border: 1px black solid;
-    border-radius: 5px;
-    resize: none;
-    font-family: Lato;
-    font-size: 14px;
-}
-
-.message:focus {
-    outline: none;
-}
-
 .buttons {
     display: flex;
     align-items: center;
@@ -65,35 +33,33 @@
     margin-bottom: 15px;
 }
 
-.create {
-    background-color: #1da11d;
-    color: white;
+.back {
+    background-color: #ffffff;
+    color: black;
     border: 1px solid white;
     border-radius: 10px;
     padding: 10px;
     font: inherit;
     cursor: pointer;
     outline: inherit;
-    margin-right: 20px;
-}
-
-.create:hover {
-    background-color: #147a14;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
 
 }
 
-.cancel {
-    background-color: #f71212;
+.back:hover {
+    background-color: #c5c5c5;
+}
+
+.form h4 {
+    margin-bottom: 1px;
+    margin-top: 10px;
     color: white;
-    border: 1px solid white;
-    border-radius: 10px;
-    padding: 10px;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
 }
 
-.cancel:hover {
-    background-color: #b61010;
-
+.form p {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: white;
 }
