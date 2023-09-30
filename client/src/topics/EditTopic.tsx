@@ -1,12 +1,13 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { API_URL } from '../api/config'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
-import styles from './addTopic.module.css'
+import styles from './editTopic.module.css'
 
-export default function AddTopic() {
+export default function EditTopic() {
 
     const navigate = useNavigate()
+    const {id} = useParams()
 
     const [topic, setTopic] = useState({
         autor: "",
@@ -15,6 +16,10 @@ export default function AddTopic() {
         titulo: "",
         mensaje: ""
     })
+
+    useEffect(() => {
+        loadTopic()
+    }, [])
 
     function onInputChange(e) {
         setTopic({
@@ -25,14 +30,20 @@ export default function AddTopic() {
 
     async function onSubmit(e) {
         e.preventDefault()
-        await axios.post(`${API_URL}/topicos`, topic)
+        await axios.put(`${API_URL}/topicos/${id}`, topic)
         navigate("/")
+    }
+
+    async function loadTopic() {
+        const result = await axios.get(`${API_URL}/topicos/${id}`)
+        setTopic(result.data)
+
     }
 
     return (
         <div className={styles.container}>
             <div className={styles.card}>
-                <h2 className={styles.title}>Crear un nuevo tópico</h2>
+                <h2 className={styles.title}>Editar tópico</h2>
 
                 <form onSubmit={(e) => onSubmit(e)}>
                     <div className={styles.form}>
@@ -86,7 +97,7 @@ export default function AddTopic() {
                                 type="submit"
                                 className={styles.create}
                             >
-                                Crear tópico
+                                Editar tópico
                             </button>
                             <Link
                                 to={"/"}

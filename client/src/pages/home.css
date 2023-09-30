@@ -1,7 +1,106 @@
 body {
-    background-color: rgb(207, 203, 203);
+    background-color: #08224d;
 }
 
 .title {
     text-align: center;
+    color: white;
+}
+
+.container {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container li {
+    background-color: #041b41;
+    height: 120px;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 30px;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.container li:hover {
+    background-color: #133469;
+    border: solid 1px white;
+}
+
+.item-title {
+    margin-right: auto;
+}
+
+.item-title p {
+    margin-bottom: 30px;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.item-info p {
+    padding: 5px;
+    margin: 0;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+#edit-topic {
+    background: none;
+    color: inherit;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    margin-bottom: 10px;
+}
+
+#edit-topic:hover {
+    background-color: white;
+    color: #041b41;
+}
+
+#delete-topic {
+    background: none;
+    color: inherit;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+#delete-topic:hover {
+    background-color: #b41c1c;
+    color: white;
+}
+
+#view-topic {
+    background: none;
+    color: inherit;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    margin-bottom: 10px;
+}
+
+#view-topic:hover {
+    background-color: white;
+    color: #041b41;
 }
